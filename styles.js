@@ -1,9 +1,8 @@
 import { StyleSheet } from 'react-native';
 
-
-
 export const styles = StyleSheet.create({
   container: {
+    //backgroundColor:"grey",
     paddingTop: 50,
     flex: 1,
     marginEnd: "5%",
@@ -12,17 +11,19 @@ export const styles = StyleSheet.create({
   },
 
 itemsContainer: {
-    height:"9%",
+    height:"auto",
     justifyContent:"center",
     alignItems: 'center',
     margin: 2, 
+    marginBottom:40,
+
 },
 item: {
     fontSize: 12,
     padding: 10,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: 'black',
+    borderColor: '#BCC1CA',
     justifyContent: 'center',
     alignItems: 'center',
 },
@@ -56,15 +57,16 @@ export const search_bar = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: 'black',
+    borderColor: '#BCC1CA',
     borderRadius: 6,
     paddingHorizontal: 16,
     height: 44,
     backgroundColor: '#FFFFFF',
-    marginBottom: 5,
+    marginBottom: 15,
   },
 
   input: {
+    
     flex: 1,
     height: '100%',
     paddingLeft: 10,
