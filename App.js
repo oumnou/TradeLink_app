@@ -1,11 +1,26 @@
-import { StyleSheet, TextInput, Text, View, SafeAreaView } from 'react-native';
+import { TextInput, Text,FlatList, View, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons'; // Using Material Icons as an example
+import { styles, name_acc, search_bar } from './styles';
 
 
 export default function App() {
+  
+  const ITEM_CATEGORIES = [
+    { id: '1', title: 'Clothing' },
+    { id: '2', title: 'Electronics' },
+    { id: '3', title: 'Furniture' },
+    { id: '4', title: 'Books'},
+    { id: '5', title: 'Toys' },
+  
+  ];
+  const renderItem = ({ item }) => (
+    <View style={styles.itemsContainer}>
+      <Text style={styles.item}>{item.title}</Text>
+    </View>
+  );
 
   return (
-
+    
     <SafeAreaView style={styles.container}>
     
     {/* App name / Account Icone */}
@@ -16,7 +31,7 @@ export default function App() {
       </View>
 
     {/* Search Bar */}
-    
+
       <View style={search_bar.textbox}>
       <Icon name="search" size={20} color="grey" style={search_bar.leftIcon} />
       <TextInput
@@ -25,67 +40,22 @@ export default function App() {
         placeholderTextColor="grey"
       />
     </View>
+    
+
+  {/* Item Categories */}
+
+   
+
+  <FlatList
+  horizontal={true}
+        data={ITEM_CATEGORIES}
+       // keyExtractor={item => item.id}
+        renderItem={renderItem}
+      />
+
 
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
- 
-  container: {
-    paddingTop:50,
-    flex:1,
-    alignContent:"center",
-  },
-});
 
-const name_acc = StyleSheet.create({
- 
-  container:{ 
-      marginEnd:"5%",
-      marginStart:"5%",
-      marginBottom:"5%",
-      height:"7%",
-      flexDirection:"row",
-      justifyContent:"space-between",        
-      alignContent:"center",
-  },
-  
-  text: {
-    fontFamily: 'Archivo',
-    fontSize: 28,
-    fontWeight: '700', // Bold
-    color: 'black',
-  },
-})
-
-const search_bar = StyleSheet.create({
-   
-  textbox: {
-      marginEnd:"5%",
-      marginStart:"5%",
-      flexDirection: 'row',
-      alignItems: 'center',
-      borderWidth: 1,
-      borderColor: '#BCC1CA',
-      borderRadius: 6,
-      paddingHorizontal: 16,
-      height: 44,
-      backgroundColor: '#FFFFFF',
-      marginBottom: 20,
-    },
-  
-  input: {
-      flex: 1,
-      height: '100%',
-      paddingLeft: 10,
-      fontSize: 16,
-      color: '#000000',
-    },
-    
-  leftIcon: {
-      marginRight: 10,
-    },
-    
-});
-  
