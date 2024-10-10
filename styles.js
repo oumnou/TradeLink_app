@@ -15,7 +15,7 @@ itemsContainer: {
     justifyContent:"center",
     alignItems: 'center',
     margin: 2, 
-    marginBottom:40,
+    marginBottom:30,
 
 },
 item: {
@@ -27,6 +27,14 @@ item: {
     justifyContent: 'center',
     alignItems: 'center',
 },
+text:{
+  fontFamily: 'Archivo', // Font family
+    fontSize: 20, // Font size
+    lineHeight: 30, // Line height
+    fontWeight: '700', // Font weight
+    color: '#000000FF', // Text color
+    marginBottom:19
+}
 
 
 });

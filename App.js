@@ -43,6 +43,9 @@ export default function App() {
   />
 </View>
 
+<Text style={styles.text}>Featured Swap Items</Text>
+
+
     {/* Cards Code */}
     <View >
   <CreateCard />
