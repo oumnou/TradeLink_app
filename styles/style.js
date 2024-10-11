@@ -86,55 +86,7 @@ export const search_bar = StyleSheet.create({
 });
 
 
-export const first_container = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    //alignItems: "center",
-    justifyContent: "center",
-    width: '100%', 
-    height: "auto",
-  },
 
-  button: {
-    alignContent:'center',
-    borderRadius: 40,
-    borderWidth: 1,
-    borderColor: '#2C35E0FF',
-    height:45,
-    alignItems:"center"
-    
-  },
-
-  tinyProfile: {
-    width: 60,
-    height: 60,
-    borderRadius: 80 / 2,
-    overflow: 'hidden',
-    borderWidth: 1,
-    borderColor: 'grey',
-  },
-
-  textContainer: {
-    paddingleft:12,
-    flex:1, // Allow text to grow and take available space
-    marginRight: 30, // Add space between text and button
-    marginleft: 10, // Add space between text and button
-  },
-
-  name:{
-    fontWeight:"bold",
-    marginBottom: 5,
-
-  },
-  text: {
-    fontSize: 14,
-    color: 'black',
-    flexShrink: 1, // Allow text to shrink if necessary
-    overflow: 'hidden', // Prevent text from overflowing the container
-    textOverflow: 'ellipsis',
-    paddingLeft:12, // Add ellipsis if text overflows
-  },
-});
 
 export const line = StyleSheet.create({
   line:{

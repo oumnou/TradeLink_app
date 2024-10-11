@@ -1,13 +1,14 @@
 import React from "react"; 
 import { FlatList, View, Text, Image, StyleSheet } from 'react-native'; 
 import { Button, } from 'react-native-paper'; 
-import {wishlistItems} from '../data/wishList';
-import {wishList_Style} from './Compon_Styles'
+import {wishlistItems} from '../../data/wishList';
+import {wishList_Style} from '../Compon_Styles'
 
 
 
 const WishList = () => { 
     return( 
+      <View>
         <FlatList  
             data={wishlistItems}
             //keyExtractor={(item) => item.id.toString()} // Add this line
@@ -26,6 +27,7 @@ const WishList = () => {
                 </View>
             )}
         />
+        </View>
     )
 }
 

@@ -1,6 +1,6 @@
 import { TextInput, Text, FlatList, View, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import CreateCard from '../components/Cards';
+import CreateCard from '../components/home/Cards';
 import { styles , name_acc, search_bar} from '../styles/style';
 
 export function HomeScreen({ navigation }) {
