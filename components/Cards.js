@@ -2,7 +2,7 @@ import React from "react";
 import { FlatList, View } from 'react-native'; 
 import { Card, Button, Title, Paragraph } from 'react-native-paper'; 
 import { Styles } from "./Card_Styles";
-import { items } from "../dummyData/items";
+import { items } from "../data/items";
 
 const CreateCard = () => { 
     return( 

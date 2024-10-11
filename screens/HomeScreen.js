@@ -1,7 +1,7 @@
 import { TextInput, Text, FlatList, View, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { styles, name_acc, search_bar } from './styles';
-import CreateCard from './components/Cards';
+import { styles, name_acc, search_bar } from '../styles/Styles';
+import CreateCard from '../components/Cards';
 
 export function HomeScreen({ navigation }) {
   const { ITEM_CATEGORIES, renderItem } = Item_cat();
