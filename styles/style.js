@@ -1,7 +1,15 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
+  container_Profile: {
+    backgroundColor:"white",
+    paddingTop: 50,
+    flex: 1,
+    
+
+  },
   container: {
+    //backgroundColor:"white",
     paddingTop: 50,
     flex: 1,
     marginEnd: "5%",
@@ -84,8 +92,6 @@ export const search_bar = StyleSheet.create({
     marginRight: 10,
   },
 });
-
-
 
 
 export const line = StyleSheet.create({

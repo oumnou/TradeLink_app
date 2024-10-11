@@ -1,24 +1,28 @@
 import React from 'react';
 import { View, Text,  SafeAreaView,  } from 'react-native';
 import WishList from '../components/profile/WishList'
-import Profile from '../components/profile/Profile'
+import Profile_ from '../components/profile/profile_'
 import AccountDetails from '../components/profile/AccountDetails'
 import { styles , name_acc,  line,} from '../styles/style';
 
 
 const ProfileScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container_Profile}>
+        <Profile_/>
 
-      <View style={name_acc.container}>
+      {/* <View style={name_acc.container}>
         <Text style={name_acc.text}>Profile</Text>
-      </View>
+      </View> */}
+      <View style={{margin:12, }}>
 
-      <Profile/>
-      <View style={line.line}/>
+      {/* <View style={line.line}/> */}
       <Text style={styles.title}>Wishlist</Text>
       <WishList/> 
-      <AccountDetails/>
+      {/* <AccountDetails/> */}
+      </View>
+
+      
 
     </SafeAreaView>
   );

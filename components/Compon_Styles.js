@@ -3,24 +3,32 @@ import { StyleSheet } from 'react-native';
 export const card_Style = StyleSheet.create({
     
     container: {
+
         backgroundColor: "white",
+        alignContent:"center",
+        alignItems:"center",
+        justifyContent: 'center',
         flexDirection: "column", // Stack rows vertically
         overflow: "visible",
-        width: "100%",
-        marginBottom:112
+    
+    
     },
-    row: {
-        flexDirection: 'row', // Arrange items in a row
-        justifyContent: 'space-between', // Space items evenly
-    },
+    // row: {
+    //     //flexDirection: 'row', // Arrange items in a row
+    //     //justifyContent: 'space-between', // Space items evenly
+    // },
     card: {
         marginBottom: 17, // Space between rows
         backgroundColor: "white",
         shadowColor: "#000", 
+
+     
+
         shadowOffset: {
             width: 0,
             height: 2,
         },
+
         shadowOpacity: 0.25,
         shadowRadius: 3.5,
         elevation: 5,
@@ -28,13 +36,13 @@ export const card_Style = StyleSheet.create({
         margin: "1%", 
     },
     actions: {
-        justifyContent: 'center', 
+      
         flexDirection: 'row',
-        width: '100%',
+      width: '100%',
     },
     fullButton: {
         flex: 1, 
-        justifyContent: 'center', 
+        justifyContent: 'flex-start', 
         borderColor: "#2C35E0FF", 
     },
     buttonText: {
@@ -90,7 +98,7 @@ export const AccountDetails_Styles = StyleSheet.create({
         flexDirection: 'row', 
         justifyContent: 'space-between', // Space between the details and button
         alignItems: 'center', 
-        padding: 20, 
+        //padding: 20, 
         backgroundColor: '#fff', 
        
     },

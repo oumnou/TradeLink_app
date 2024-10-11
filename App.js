@@ -41,7 +41,6 @@ const App = () => {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ color, size }) => {
             let iconName;
-
             if (route.name === 'Home') {
               iconName = 'home-outline';
             }else if (route.name === 'Notification') {
@@ -62,8 +61,9 @@ const App = () => {
         <Tab.Screen name="Home" component={HomeStack} options={{ headerShown: false }} />
         {/* Define ProfileTab */}
         <Tab.Screen name="Notifications" component={ProfileStack} options={{ headerShown: false }} />
-        <Tab.Screen name="Profile" component={ProfileStack} options={{ headerShown: false }} />
         <Tab.Screen name="Chat" component={ProfileStack} options={{ headerShown: false }} />
+        <Tab.Screen name="Profile" component={ProfileStack} options={{ headerShown: false }} />
+
 
       </Tab.Navigator>
     </NavigationContainer>
