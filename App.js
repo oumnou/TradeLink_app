@@ -1,76 +1,24 @@
-import { TextInput, Text,FlatList, View, SafeAreaView } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons'; // Using Material Icons as an example
-import { styles, name_acc, search_bar } from './styles';
- import CreateCard from './components/Cards'
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { HomeScreen } from './HomeScreen';
+import ProfileScreen from './ProfileScreen';
 
+const Stack = createStackNavigator();
 
-
-export default function App() {
-  
-  const { ITEM_CATEGORIES, renderItem } = Item_cat();
-
+const App = () => {
   return (
-    
-    <SafeAreaView style={styles.container}>
-    
-    {/* App name / Account Icone */}
-
-      <View style={name_acc.container}>
-        <Text style={name_acc.text}>TradeLink</Text>
-        <Icon name="account-circle" size={38} color="grey"  />
-      </View>
-
-    {/* Search Bar */}
-
-      <View style={search_bar.textbox}>
-      <Icon name="search" size={20} color="grey" style={search_bar.leftIcon} />
-      <TextInput
-        style={search_bar.input}
-        placeholder="Search for Items ..."
-        placeholderTextColor="grey"
-      />
-    </View>
-    
-
-    {/* Item Categories */}
-
-    <View style={{ flex: 0 }}>
-  <FlatList 
-    horizontal={true} 
-    data={ITEM_CATEGORIES}
-    keyExtractor={item => item.id}
-    renderItem={renderItem}
-  />
-</View>
-
-<Text style={styles.text}>Featured Swap Items</Text>
-
-
-    {/* Cards Code */}
-    <View >
-  <CreateCard />
-</View>
-
-
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        {/* Define HomeScreen */}
+        <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} 
+        />
+        {/* Define ProfileScreen */}
+        <Stack.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} 
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
+};
 
-  function Item_cat() {
-    const ITEM_CATEGORIES = [
-      { id: '1', title: 'Clothing' },
-      { id: '2', title: 'Electronics' },
-      { id: '3', title: 'Furniture' },
-      { id: '4', title: 'Books' },
-      { id: '5', title: 'Toys' },
-    ];
-
-    const renderItem = ({ item }) => (
-      <View style={styles.itemsContainer}>
-        <Text style={styles.item}>{item.title}</Text>
-      </View>
-    );
-    return { ITEM_CATEGORIES, renderItem };
-  }
-}
-
-
+export default App;
