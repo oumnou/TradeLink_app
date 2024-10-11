@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-export const Styles = StyleSheet.create({
+export const cardStyles = StyleSheet.create({
     
     container: {
         backgroundColor: "white",
@@ -48,3 +48,40 @@ export const Styles = StyleSheet.create({
         marginBottom: 15,
     },
 });
+
+export const wishList_Style = StyleSheet.create({
+    itemContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      padding: 10,
+      marginVertical: 5,
+      backgroundColor: '#fff',
+      borderRadius: 5,
+      
+    },
+    textContainer: {
+      justifyContent: 'space-between',
+      flex: 1,
+      marginRight: 10,
+    },
+    title: {
+        color:"grey",
+      fontSize: 12,
+      marginBottom: 10, // Add space between title and button
+    },
+    image: {
+      width: 100, // Adjust width to match the design
+      height: 80, 
+      borderRadius: 5,
+    },
+    button:{
+    marginTop:10,
+    width:104,
+    alignContent:"center",
+    alignItems:"center",
+    borderRadius:10,
+    
+
+    }
+  });
+  

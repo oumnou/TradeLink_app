@@ -2,7 +2,6 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    //backgroundColor:"grey",
     paddingTop: 50,
     flex: 1,
     marginEnd: "5%",
@@ -27,7 +26,7 @@ item: {
     justifyContent: 'center',
     alignItems: 'center',
 },
-text:{
+title:{
   fontFamily: 'Archivo', // Font family
     fontSize: 20, // Font size
     lineHeight: 30, // Line height
@@ -43,7 +42,6 @@ text:{
 export const name_acc = StyleSheet.create({
   container: {
 
-    marginBottom: "5%",
     height: "7%",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -52,7 +50,7 @@ export const name_acc = StyleSheet.create({
 
   text: {
     fontFamily: 'Archivo',
-    fontSize: 28,
+    fontSize: 20,
     fontWeight: '700', // Bold
     color: 'black',
   },
@@ -91,7 +89,7 @@ export const search_bar = StyleSheet.create({
 export const first_container = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    alignItems: "center",
+    //alignItems: "center",
     justifyContent: "center",
     width: '100%', 
     height: "auto",
@@ -117,13 +115,17 @@ export const first_container = StyleSheet.create({
   },
 
   textContainer: {
-        
     paddingleft:12,
     flex:1, // Allow text to grow and take available space
     marginRight: 30, // Add space between text and button
     marginleft: 10, // Add space between text and button
   },
 
+  name:{
+    fontWeight:"bold",
+    marginBottom: 5,
+
+  },
   text: {
     fontSize: 14,
     color: 'black',
@@ -133,3 +135,16 @@ export const first_container = StyleSheet.create({
     paddingLeft:12, // Add ellipsis if text overflows
   },
 });
+
+export const line = StyleSheet.create({
+  line:{
+    borderBottomColor: 'black',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    marginTop:30,
+    marginLeft:100,
+    marginRight:100,
+    marginBottom:20,
+
+
+    }
+})

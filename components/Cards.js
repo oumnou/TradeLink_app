@@ -1,7 +1,7 @@
 import React from "react"; 
-import { FlatList, View } from 'react-native'; 
+import { FlatList, } from 'react-native'; 
 import { Card, Button, Title, Paragraph } from 'react-native-paper'; 
-import { Styles } from "./Card_Styles";
+import { cardStyles } from "./Compon_Styles";
 import { items } from "../data/items";
 
 const CreateCard = () => { 
@@ -9,17 +9,17 @@ const CreateCard = () => {
         <FlatList 
             data={items}
             renderItem={({ item }) => (
-                <Card style={Styles.card}>
+                <Card style={cardStyles.card}>
                     <Card.Cover source={{ uri: item.image }} /> 
                     <Card.Content> 
-                        <Title style={Styles.title}>{item.title}</Title> 
-                        <Paragraph style={Styles.paragraph} numberOfLines={3}>{item.description}</Paragraph> 
+                        <Title style={cardStyles.title}>{item.title}</Title> 
+                        <Paragraph style={cardStyles.paragraph} numberOfLines={3}>{item.description}</Paragraph> 
                     </Card.Content> 
-                    <Card.Actions style={Styles.actions}>
+                    <Card.Actions style={cardStyles.actions}>
                         <Button 
                             mode="outlined" 
-                            labelStyle={Styles.buttonText} 
-                            style={[Styles.fullButton, { borderRadius: 4 }]} 
+                            labelStyle={cardStyles.buttonText} 
+                            style={[cardStyles.fullButton, { borderRadius: 4 }]} 
                         >
                             Swap Now
                         </Button>
@@ -28,7 +28,7 @@ const CreateCard = () => {
             )}
             keyExtractor={item => item.id.toString()}
             numColumns={2} // Display cards in two columns
-            contentContainerStyle={Styles.scrollContainer}
+            contentContainerStyle={cardStyles.scrollContainer}
         />
     ); 
 } 

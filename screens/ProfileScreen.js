@@ -1,9 +1,9 @@
 import React from 'react';
 import { View,Image, Text, StyleSheet, SafeAreaView,  } from 'react-native';
 import { Button, Appbar } from 'react-native-paper'; // Import Button and any other components
-
+import WishList from '../components/WishList'
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { styles , name_acc, first_container} from '../styles/style';
+import { styles , name_acc, first_container, line,} from '../styles/style';
 
 
 const ProfileScreen = () => {
@@ -14,12 +14,7 @@ const ProfileScreen = () => {
       {/* Profile / Settings Icon */}
       <View style={name_acc.container}>
         <Text style={name_acc.text}>Profile</Text>
-        <Icon
-          name="settings"
-          size={38}
-          color="grey"
-          onPress={() => navigation.navigate('Profile')} // Navigate to ProfileScreen
-        />
+       
       </View>
 
       {/* Image  / Info / Edit Button */}
@@ -32,7 +27,7 @@ const ProfileScreen = () => {
       />
 
       <View style={first_container.textContainer}>
-        <Text style={first_container.text} >
+        <Text style={[first_container.text,first_container.name ]} >
           Oumnou 
         </Text>
         <Text style={first_container.text} >
@@ -47,7 +42,10 @@ const ProfileScreen = () => {
       >Edit</Button>
 
     </View>
+    <View style={line.line}/>
 
+    <Text style={styles.title}>Wishlist</Text>
+    <WishList/> 
       </SafeAreaView>
   );
 };

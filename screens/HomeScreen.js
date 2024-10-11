@@ -37,7 +37,7 @@ export function HomeScreen({ navigation }) {
           renderItem={renderItem} />
       </View>
 
-      <Text style={styles.text}>Featured Swap Items</Text>
+      <Text style={styles.title}>Featured Swap Items</Text>
 
       {/* Cards Code */}
       <View>
